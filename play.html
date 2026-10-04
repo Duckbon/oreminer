@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play the Ore Miner demo</title>
+<meta name="description" content="Play the Ore Miner web demo: mine ore, buy upgrades and launch through the first three star systems, free in your browser.">
+<meta name="theme-color" content="#05060F">
+<meta property="og:title" content="Play the Ore Miner demo">
+<meta property="og:description" content="Play the Ore Miner web demo: mine ore, buy upgrades and launch through the first three star systems, free in your browser.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="14 14 80 80"><defs><radialGradient id="lg" cx="50%" cy="37%" r="74%"><stop offset="0" stop-color="#2A1F5C"/><stop offset=".5" stop-color="#10173A"/><stop offset="1" stop-color="#05060F"/></radialGradient></defs><rect x="14" y="14" width="80" height="80" rx="18" fill="url(#lg)"/><circle cx="54" cy="54" r="34" fill="#F2A83C" fill-opacity=".2"/><path d="M82 54 71.8 66.9 63.3 82.5 46.6 76.8 30.5 71.1 33 54 32.2 38.1 46.9 32.1 63.3 25.5 71.8 41.1Z" fill="#7A6753" stroke="#F2A83C" stroke-width="2"/><path d="M46.9 32.1 54 54 63.3 82.5" fill="none" stroke="#F2A83C" stroke-width="2.5"/><path d="M32.2 38.1 46.6 76.8" fill="none" stroke="#F2A83C" stroke-width="2"/><circle cx="42" cy="40" r="3" fill="#4FD8E0"/></svg>
+Ore Miner</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="play.html" aria-current="page">Play the demo</a></li>
+      <li><a href="guide.html">Game guide</a></li>
+      <li><a href="index.html#community">Community</a></li>
+      <li><a class="btn btn-small" data-store href="#">Get it on Google Play</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main" class="play">
+  <div class="wrap play-in">
+    <div class="phone"><div class="phone-game" data-game></div></div>
+    <div class="play-side">
+      <h1>The Ore Miner demo</h1>
+      <p>This is the real game loop with the real numbers, covering the first three star systems. Tap the asteroid, buy upgrades, and launch when you hit the target. Progress saves in this browser, and your drones keep mining for a while after you close the tab.</p>
+      <dl class="readout">
+        <div><dt>Ore per tap</dt><dd data-stat="tap">1</dd></div>
+        <div><dt>Ore per second</dt><dd data-stat="sec">0</dd></div>
+        <div><dt>Production bonus</dt><dd data-stat="bonus">+0%</dd></div>
+        <div><dt>Lifetime ore</dt><dd data-stat="life">0</dd></div>
+        <div><dt>Taps</dt><dd data-stat="taps">0</dd></div>
+        <div><dt>Offline mining</dt><dd data-stat="offline">5 min at 50%</dd></div>
+      </dl>
+      <ol class="legs" aria-label="Demo route"></ol>
+      <div class="play-more">
+        <h2>Only in the full game</h2>
+        <ul>
+          <li>Seven more star systems, out to The Omega System</li>
+          <li>Rebirths and the five-perk skill tree</li>
+          <li>Daily rewards, the daily spin and the asteroid shooter mini-game</li>
+          <li>Sound, vibration and reminders when your ore is ready</li>
+        </ul>
+      </div>
+      <div class="play-actions">
+        <a class="btn" data-store href="#">Get it on Google Play</a>
+        <a class="btn btn-ghost" href="guide.html">Read the game guide</a>
+        <button class="btn btn-danger" type="button" data-reset>Reset demo progress</button>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>&copy; <span data-year>2026</span> Ore Miner. An idle space-mining game for Android.</p>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="play.html">Play the demo</a>
+      <a href="guide.html">Game guide</a>
+      <a href="index.html#community">Community</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

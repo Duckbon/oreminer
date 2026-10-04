@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ore Miner: idle space mining for Android</title>
+<meta name="description" content="Mine ore, automate it with drones and refineries, and launch through ten star systems. Play the Ore Miner demo in your browser.">
+<meta name="theme-color" content="#05060F">
+<meta property="og:title" content="Ore Miner: idle space mining for Android">
+<meta property="og:description" content="Mine ore, automate it with drones and refineries, and launch through ten star systems. Play the Ore Miner demo in your browser.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="14 14 80 80"><defs><radialGradient id="lg" cx="50%" cy="37%" r="74%"><stop offset="0" stop-color="#2A1F5C"/><stop offset=".5" stop-color="#10173A"/><stop offset="1" stop-color="#05060F"/></radialGradient></defs><rect x="14" y="14" width="80" height="80" rx="18" fill="url(#lg)"/><circle cx="54" cy="54" r="34" fill="#F2A83C" fill-opacity=".2"/><path d="M82 54 71.8 66.9 63.3 82.5 46.6 76.8 30.5 71.1 33 54 32.2 38.1 46.9 32.1 63.3 25.5 71.8 41.1Z" fill="#7A6753" stroke="#F2A83C" stroke-width="2"/><path d="M46.9 32.1 54 54 63.3 82.5" fill="none" stroke="#F2A83C" stroke-width="2.5"/><path d="M32.2 38.1 46.6 76.8" fill="none" stroke="#F2A83C" stroke-width="2"/><circle cx="42" cy="40" r="3" fill="#4FD8E0"/></svg>
+Ore Miner</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="play.html">Play the demo</a></li>
+      <li><a href="guide.html">Game guide</a></li>
+      <li><a href="index.html#community">Community</a></li>
+      <li><a class="btn btn-small" data-store href="#">Get it on Google Play</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1><span>Tap a rock.</span><span>Build a fleet.</span><span>Leave Sol behind.</span></h1>
+      <p class="hero-lede">Ore Miner is an idle mining game for Android. Mine ore by hand, hand the job to drones and refineries, then launch through ten star systems. The phone on this page is a playable demo, so go ahead and tap the asteroid.</p>
+      <div class="hero-cta">
+        <a class="btn" data-store href="#">Get it on Google Play</a>
+        <a class="btn btn-ghost" href="play.html">Play the full-size demo</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong>10</strong>star systems</li>
+        <li><strong>13</strong>upgrades to buy</li>
+        <li><strong>24 hr</strong>offline mining, at most</li>
+        <li><strong>Free</strong>to play</li>
+      </ul>
+    </div>
+    <div class="hero-phone">
+      <div class="phone"><div class="phone-game" data-game></div></div>
+      <p class="hero-phone-note">Your demo progress saves in this browser.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="run-title">
+  <div class="wrap">
+    <div class="band-head">
+      <h2 id="run-title">How a run goes</h2>
+      <p>Every system plays the same four beats, and each lap is faster than the last.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Tap the asteroid</h3><p>Each tap mines ore. Keep tapping inside 0.9 seconds and a combo builds, up to double ore per tap.</p></li>
+      <li><h3>Automate it</h3><p>Spend ore on drones and refineries that mine every second, including while the app is closed.</p></li>
+      <li><h3>Launch</h3><p>Hit the system's ore target and warp to the next star. Ore and upgrades reset. Warp Cores and a new upgrade come with you.</p></li>
+      <li><h3>Rebirth</h3><p>Clear all ten systems and start again at Sol Belt with +10% production for good, plus a Skill Point to spend.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="route-title">
+  <div class="wrap">
+    <div class="band-head">
+      <h2 id="route-title">Ten systems, one route</h2>
+      <p>Each system has its own colour, a bigger ore target and a new upgrade. Pick a stop to see what's there. The whole page changes colour with it, the way the game does when you land.</p>
+    </div>
+    <ol class="route" aria-label="Star systems"></ol>
+    <div class="system-panel" aria-live="polite">
+      <canvas width="200" height="200" aria-hidden="true"></canvas>
+      <div>
+        <h3>Sol Belt</h3>
+        <p class="sub"></p>
+        <dl class="system-stats">
+          <div><dt data-goal-label>Ore needed to launch onward</dt><dd data-goal></dd></div>
+          <div><dt>New upgrade here</dt><dd data-upgrade></dd></div>
+          <div><dt>System bonus</dt><dd data-bonus></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="more-title">
+  <div class="wrap">
+    <div class="band-head">
+      <h2 id="more-title">Plenty to do between launches</h2>
+      <p>Try a couple of them right here.</p>
+    </div>
+    <div class="board">
+      <div class="tile tile-combo">
+        <h3>Tap fast for a combo</h3>
+        <p>Every quick tap adds 10% to the next one, up to ten stacks. Stop for 0.9 seconds and it's gone.</p>
+        <div class="combo-try">
+          <button class="combo-pad" type="button">Tap me fast</button>
+          <div class="combo-read">
+            <output aria-live="off">x1.0</output>
+            <div class="combo-bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tile tile-daily">
+        <h3>A reward every day</h3>
+        <p>Open the game each day to keep the streak going. Day 7 pays 15,000 ore, then the week starts again.</p>
+        <ol class="daily">
+          <li>Day 1<strong>100</strong></li><li>Day 2<strong>250</strong></li><li>Day 3<strong>500</strong></li><li>Day 4<strong>1,000</strong></li>
+          <li>Day 5<strong>2,500</strong></li><li>Day 6<strong>5,000</strong></li><li>Day 7<strong>15,000</strong></li>
+        </ol>
+      </div>
+      <div class="tile tile-spin">
+        <h3>The daily spin</h3>
+        <p>After each daily reward you spin for a 1-in-3 shot at the asteroid shooter mini-game.</p>
+        <div class="wheel-wrap"><svg viewBox="0 0 200 200" role="img" aria-label="Prize wheel with six slices, two of them marked mini-game"></svg></div>
+        <div class="spin-foot">
+          <button class="btn btn-go btn-small" type="button" data-spin>Spin the wheel</button>
+          <p class="spin-result" role="status"></p>
+        </div>
+      </div>
+      <div class="tile tile-skill">
+        <h3>A skill tree that lasts</h3>
+        <p>Rebirths earn Skill Points. Each perk has five levels and survives every reset.</p>
+        <ul class="perks">
+          <li>Golden Touch <span>+4% ore per tap</span></li>
+          <li>Auto Collector <span>+4% ore per second</span></li>
+          <li>Efficient Drones <span>+10% offline rate</span></li>
+          <li>Deep Pockets <span>+2 hr offline time</span></li>
+          <li>Bargain Hunter <span>-3% upgrade cost</span></li>
+        </ul>
+      </div>
+      <div class="tile-stack">
+        <div class="tile">
+          <h3>Three-minute challenges</h3>
+          <p>Three are always running: earn ore, tap a set number of times, or buy upgrades. Finish one in time and claim bonus ore.</p>
+        </div>
+        <div class="tile">
+          <h3>Ten achievements</h3>
+          <p>Each one adds 1% to everything you mine. Unlock all ten for a pile of ore and an extra Skill Point.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="shots-title" hidden>
+  <div class="wrap">
+    <div class="band-head"><h2 id="shots-title">Screenshots</h2></div>
+    <div class="shots"></div>
+  </div>
+</section>
+
+<section class="band" id="community" aria-labelledby="community-title">
+  <div class="wrap">
+    <div class="band-head">
+      <h2 id="community-title">Help decide what gets built next</h2>
+      <p>Ore Miner is made by one developer, and every message gets read. Send an idea, report a bug, or just say what you'd change.</p>
+    </div>
+    <div class="community">
+      <form class="tile" id="feedback-form" novalidate>
+        <input type="hidden" name="_subject" value="Ore Miner website: suggestion">
+        <input type="hidden" name="form" value="Suggestion">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <h3>Send a suggestion</h3>
+        <fieldset class="kinds">
+          <legend>What is it?</legend>
+          <label><input type="radio" name="kind" value="Idea" checked><span>An idea</span></label>
+          <label><input type="radio" name="kind" value="Bug report"><span>A bug</span></label>
+          <label><input type="radio" name="kind" value="Feedback"><span>Something else</span></label>
+        </fieldset>
+        <label class="field"><span>Your message</span>
+          <textarea name="message" required placeholder="For example: a new star system after Omega, or a bug you ran into"></textarea>
+        </label>
+        <label class="field"><span>Your name <em>(optional)</em></span>
+          <input type="text" name="name" autocomplete="name">
+        </label>
+        <div class="form-foot">
+          <button class="btn" type="submit">Send suggestion</button>
+          <p class="form-status" role="status"></p>
+        </div>
+      </form>
+      <div class="side">
+        <div class="tile">
+          <h3>Get update news</h3>
+          <p>One email when a new version or event goes live. Nothing else.</p>
+          <form class="inline-form" id="news-form" novalidate>
+            <input type="hidden" name="_subject" value="Ore Miner website: news sign-up">
+            <input type="hidden" name="form" value="News sign-up">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <input type="email" name="email" autocomplete="email" placeholder="name@example.com" aria-label="Email address" required>
+            <button class="btn" type="submit">Sign me up</button>
+          </form>
+          <p class="form-status" role="status"></p>
+        </div>
+        <div class="tile">
+          <h3>Talk to other miners</h3>
+          <p>Swap strategies, compare rebirth counts and see what's coming.</p>
+          <a class="btn btn-ghost" data-discord href="#">Join the Discord</a>
+        </div>
+        <div class="tile">
+          <h3>Bring a friend</h3>
+          <p>Know someone who can't leave an idle game alone?</p>
+          <button class="btn btn-ghost" type="button" data-share>Share Ore Miner</button>
+          <p class="form-status" role="status" data-share-status></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>&copy; <span data-year>2026</span> Ore Miner. An idle space-mining game for Android.</p>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="play.html">Play the demo</a>
+      <a href="guide.html">Game guide</a>
+      <a href="index.html#community">Community</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

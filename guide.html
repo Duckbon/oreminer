@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ore Miner game guide</title>
+<meta name="description" content="Every number in Ore Miner: upgrades, star systems, Warp Cores, rebirths, the skill tree, challenges, daily rewards and achievements.">
+<meta name="theme-color" content="#05060F">
+<meta property="og:title" content="Ore Miner game guide">
+<meta property="og:description" content="Every number in Ore Miner: upgrades, star systems, Warp Cores, rebirths, the skill tree and more.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="14 14 80 80"><defs><radialGradient id="lg" cx="50%" cy="37%" r="74%"><stop offset="0" stop-color="#2A1F5C"/><stop offset=".5" stop-color="#10173A"/><stop offset="1" stop-color="#05060F"/></radialGradient></defs><rect x="14" y="14" width="80" height="80" rx="18" fill="url(#lg)"/><circle cx="54" cy="54" r="34" fill="#F2A83C" fill-opacity=".2"/><path d="M82 54 71.8 66.9 63.3 82.5 46.6 76.8 30.5 71.1 33 54 32.2 38.1 46.9 32.1 63.3 25.5 71.8 41.1Z" fill="#7A6753" stroke="#F2A83C" stroke-width="2"/><path d="M46.9 32.1 54 54 63.3 82.5" fill="none" stroke="#F2A83C" stroke-width="2.5"/><path d="M32.2 38.1 46.6 76.8" fill="none" stroke="#F2A83C" stroke-width="2"/><circle cx="42" cy="40" r="3" fill="#4FD8E0"/></svg>
+Ore Miner</a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="play.html">Play the demo</a></li>
+      <li><a href="guide.html" aria-current="page">Game guide</a></li>
+      <li><a href="index.html#community">Community</a></li>
+      <li><a class="btn btn-small" data-store href="#">Get it on Google Play</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main" class="guide">
+<div class="wrap">
+  <div class="guide-top">
+    <h1>Game guide</h1>
+    <p>How everything in Ore Miner works, with the exact numbers the game uses. Search for a word or jump to a section.</p>
+  </div>
+  <div class="guide-in">
+    <aside class="toc" aria-label="Guide sections">
+      <input type="search" id="guide-search" placeholder="Search the guide" aria-label="Search the guide">
+      <ol></ol>
+      <p class="toc-empty" role="status" hidden></p>
+    </aside>
+    <div class="doc">
+
+      <section id="basics">
+        <h2>Getting started</h2>
+        <p>Tap the asteroid to mine ore. You start with <strong>1 ore per tap</strong> and nothing mining on its own. Open the Upgrades panel and spend ore on three kinds of upgrade:</p>
+        <ul>
+          <li><strong>Drills</strong> add ore to every tap.</li>
+          <li><strong>Drones, refineries and reactors</strong> mine ore every second, whether you tap or not.</li>
+          <li><strong>The Idle Collector</strong> lets your machines keep mining for longer while the game is closed.</li>
+        </ul>
+        <p>When you're holding enough ore to meet the system's target, the launch button lights up. Launching takes you to the next star system, where the cycle starts again with a new upgrade and bigger numbers.</p>
+        <p>A good opening: buy a few Better Drills, get Mining Drones running, then pick up one Idle Collector before you put the phone down.</p>
+      </section>
+
+      <section id="upgrades">
+        <h2>Upgrades</h2>
+        <p>Four upgrades are available from the start. Every star system after Sol Belt adds one more, which stays in the list for the rest of the run. Each time you buy an upgrade its price rises by 15%, or 30% for the Idle Collector.</p>
+        <div class="table"><table id="upgrade-table">
+          <thead><tr><th>Upgrade</th><th>What each one gives</th><th class="num">First cost</th><th>Unlocked in</th></tr></thead><tbody></tbody>
+        </table></div>
+        <div class="calc">
+          <h4>Upgrade cost calculator</h4>
+          <div class="calc-row">
+            <label>Upgrade<select id="cost-upgrade"></select></label>
+            <label>How many you own<input id="cost-owned" type="number" min="0" max="400" value="0" inputmode="numeric"></label>
+          </div>
+          <output id="cost-out" aria-live="polite"></output>
+        </div>
+      </section>
+
+      <section id="systems">
+        <h2>Star systems</h2>
+        <p>There are ten systems. The ore target is how much ore you need <strong>in hand</strong> to launch onward, so ore you spend on upgrades doesn't count towards it. The system bonus is added to all production while you're mining there.</p>
+        <div class="table"><table id="system-table">
+          <thead><tr><th>System</th><th class="num">Ore target</th><th>New upgrade</th><th class="num">System bonus</th></tr></thead><tbody></tbody>
+        </table></div>
+      </section>
+
+      <section id="launching">
+        <h2>Launching and Warp Cores</h2>
+        <p>Launching resets your ore and every upgrade you own. You keep your Warp Cores, achievements, skill tree, rebirths and lifetime ore total.</p>
+        <p>Warp Cores are worked out from your <strong>lifetime ore</strong>, which is all the ore you've ever mined and never resets. On each launch or rebirth the game sets:</p>
+        <p><code>Warp Cores = square root of (lifetime ore &divide; 1,000,000)</code>, rounded down.</p>
+        <p>Each core adds <strong>2% production</strong>, and your core count never goes down. The first core arrives at 1 million lifetime ore, so your earliest launches usually give none. Cores are only recalculated when you launch, so mining further before launching still pays off later.</p>
+        <div class="calc">
+          <h4>Warp Core calculator</h4>
+          <div class="calc-row">
+            <label>Lifetime ore (try 250000, 4M or 1.2B)<input id="core-in" type="text" value="4M" inputmode="text" autocomplete="off"></label>
+          </div>
+          <output id="core-out" aria-live="polite"></output>
+        </div>
+        <h3>How the production bonus adds up</h3>
+        <p>Everything is added together into one percentage, and that boosts both taps and per-second mining:</p>
+        <ul>
+          <li>2% for each Warp Core</li>
+          <li>the system bonus for where you are (10% for every two systems, up to 50% in The Omega System)</li>
+          <li>10% for each rebirth</li>
+          <li>1% for each achievement unlocked</li>
+        </ul>
+        <p>The optional ad boost doubles the result for 60 seconds.</p>
+      </section>
+
+      <section id="rebirth">
+        <h2>Rebirth and the skill tree</h2>
+        <p>In The Omega System the launch button becomes <strong>Rebirth</strong> once you're holding 75 billion ore. A rebirth sends you back to Sol Belt with no ore or upgrades, and gives you:</p>
+        <ul>
+          <li>a permanent <strong>+10% production</strong> that stacks with every rebirth</li>
+          <li><strong>1 Skill Point</strong></li>
+          <li>a fresh Warp Core count based on your lifetime ore</li>
+        </ul>
+        <h3>The skill tree</h3>
+        <p>Tap the Warp Cores line under the asteroid to open it. There are five perks with five levels each. A perk's next level costs one more Skill Point than the last (1, 2, 3, 4, then 5), so maxing one perk takes 15 points. Perks are never reset.</p>
+        <div class="table"><table id="skill-table">
+          <thead><tr><th>Perk</th><th>Each level</th><th>At level 5</th></tr></thead><tbody></tbody>
+        </table></div>
+        <p>Efficient Drones raises your offline rate while you don't own an Idle Collector. It can't push the rate past 100%.</p>
+      </section>
+
+      <section id="combo">
+        <h2>Tap combo</h2>
+        <p>Tap again within <strong>0.9 seconds</strong> of your last tap and you gain a combo stack. Each stack adds 10% ore to your taps, up to 10 stacks for <strong>double ore</strong>. The combo label appears from the second stack. Pause for longer than 0.9 seconds and the combo starts over.</p>
+        <p>The combo only affects taps. It doesn't change per-second mining.</p>
+      </section>
+
+      <section id="offline">
+        <h2>Offline mining</h2>
+        <p>Your per-second machines keep working while the game is closed. When you come back, you're paid:</p>
+        <p><code>ore per second &times; seconds away &times; offline rate</code></p>
+        <ul>
+          <li><strong>Time limit:</strong> 5 minutes to begin with. Each Idle Collector adds 5 minutes and each level of the Deep Pockets perk adds 2 hours, up to a maximum of 24 hours.</li>
+          <li><strong>Offline rate:</strong> 50% with no Idle Collector, 100% once you own at least one.</li>
+        </ul>
+        <p>Upgrades reset when you launch, so buy an Idle Collector early in each system. If notifications are on, the game tells you when your offline time is nearly full.</p>
+      </section>
+
+      <section id="challenges">
+        <h2>Timed challenges</h2>
+        <p>Three challenges are always running, and each lasts <strong>3 minutes</strong>. There are three kinds:</p>
+        <ul>
+          <li><strong>Earn ore:</strong> the target is set from your current income, roughly 90 seconds of per-second mining or 40 taps, whichever is higher.</li>
+          <li><strong>Tap MINE:</strong> between 30 and 60 taps.</li>
+          <li><strong>Buy upgrades:</strong> between 1 and 3 purchases.</li>
+        </ul>
+        <p>Finish in time and press Claim. The reward is 5% of the current system's ore target, so it grows as you travel. A claimed or expired challenge is replaced by one of a different kind.</p>
+        <div class="table"><table id="challenge-table">
+          <thead><tr><th>System</th><th class="num">Reward per challenge</th></tr></thead><tbody></tbody>
+        </table></div>
+      </section>
+
+      <section id="daily">
+        <h2>Daily rewards, the spin and the mini-game</h2>
+        <p>The first time you open the game each day you claim a reward. Claim on consecutive days to move up the week. After day 7 the streak goes back to day 1, and missing a day also sends you back to day 1. The day changes at midnight UTC.</p>
+        <div class="table"><table id="daily-table">
+          <thead><tr><th>Streak day</th><th class="num">Ore</th></tr></thead><tbody></tbody>
+        </table></div>
+        <h3>The daily spin</h3>
+        <p>After claiming, you spin a six-slice wheel. Two slices unlock the mini-game, a <strong>1-in-3 chance</strong>. If you miss, you can watch an ad for one bonus spin.</p>
+        <h3>Asteroid shooter</h3>
+        <p>Drag to steer your ship while it fires on its own. You have <strong>25 seconds</strong> and <strong>3 lives</strong>, and asteroids arrive faster as time passes. Each asteroid you destroy pays:</p>
+        <p><code>40 + 15 for each system past Sol Belt + 25 for each rebirth</code> ore.</p>
+        <p>At the end you can watch an ad to double the payout.</p>
+      </section>
+
+      <section id="achievements">
+        <h2>Achievements</h2>
+        <p>Each achievement adds a permanent <strong>1% production</strong>. Unlock all ten and you also get a one-off ore bonus (5% of your lifetime ore, at least 50,000) and 1 Skill Point.</p>
+        <div class="table"><table id="achievement-table">
+          <thead><tr><th>Achievement</th><th>How to unlock it</th></tr></thead><tbody></tbody>
+        </table></div>
+      </section>
+
+      <section id="shop">
+        <h2>Shop and ads</h2>
+        <p>Everything in the game can be reached without paying. The shop shows prices in your local currency.</p>
+        <div class="table"><table id="shop-table">
+          <thead><tr><th>Item</th><th>What it does</th></tr></thead><tbody></tbody>
+        </table></div>
+        <p>Optional reward ads give 2&times; ore for 60 seconds, a bonus daily spin, or a doubled mini-game payout. A full-screen ad can appear after a launch or rebirth, at most once every two minutes.</p>
+      </section>
+
+      <section id="numbers">
+        <h2>Big numbers and settings</h2>
+        <p>Amounts under 100,000 are shown in full. Above that the game shortens them:</p>
+        <div class="table"><table>
+          <thead><tr><th>Suffix</th><th>Means</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>k</td><td>thousand</td><td>250k = 250,000</td></tr>
+            <tr><td>M</td><td>million</td><td>5M = 5,000,000</td></tr>
+            <tr><td>B</td><td>billion</td><td>75B = 75,000,000,000</td></tr>
+            <tr><td>T</td><td>trillion</td><td>1.5T</td></tr>
+            <tr><td>Qa</td><td>quadrillion</td><td>2Qa</td></tr>
+            <tr><td>Qi</td><td>quintillion</td><td>1Qi</td></tr>
+          </tbody>
+        </table></div>
+        <p>The gear button opens Settings, where you can switch vibration, sound, tap effects, reduced motion and both reminder notifications on or off, restore a Remove Ads purchase, and reset your progress. A reset is permanent.</p>
+      </section>
+
+    </div>
+  </div>
+</div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>&copy; <span data-year>2026</span> Ore Miner. An idle space-mining game for Android.</p>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="play.html">Play the demo</a>
+      <a href="guide.html">Game guide</a>
+      <a href="index.html#community">Community</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/guide.js"></script>
+</body>
+</html>
